@@ -1,14 +1,35 @@
-import os
+import logging
+logging.basicConfig(filename='calc_log.log', level=logging.DEBUG, format='%(asctime)s %(levelname)s %(funcName)s || %(message)s')
 
-path = "test"
+print("Զրոն որպես գործողության նշան կդադարեցնի ծրագիրը")
 
-if not os.path.exists(path):
-    os.mkdir(path)
-    print(f"{path} directory created successfully")
-else:
-    print(f"Failed to create directory {path}")
+while True:
+    operator = input("Operator (+,-,*,/): ")
+    solution = 0
+    if operator == '0':
+        logging.info('Project ended')
+        break
+    if operator in ('+', '-', '*', '/'):
+        num1 = int(input("number1 =  "))
+        num2 = int(input("number2 =  "))
+        logging.info(f'The user entered the numbers {num1} and {num2}')
 
-os.chdir(path)
-
-with open("data.txt", "a", encoding="utf-8") as f:
-    f.write("Test ")
+        if operator == '+':
+            solution = num1 + num2
+        elif operator == '-':
+            solution = num1 - num2
+        elif operator == '*':
+            solution = num1 * num2
+        elif operator == '/':
+            if num2 != 0:
+                solution = num1 / num2
+            else:
+                print('Cannot be divided by zero')
+                logging.error('Cannot be divided by zero')
+                continue
+        print(f"{num1} {operator} {num2} = {solution}")
+        logging.info(f'The user entered the {operator} symbol')
+        logging.info(f'{num1} {operator} {num2} = {solution}')
+    else:
+        print("Անվավեր գործողության նշան:")
+        logging.error(f'Invalid operator {operator}')
