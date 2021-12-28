@@ -31,5 +31,5 @@ while True:
         logging.info(f'The user entered the {operator} symbol')
         logging.info(f'{num1} {operator} {num2} = {solution}')
     else:
-        print("Անվավեր գործողության նշան:")
+        print("Invalid operator")
         logging.error(f'Invalid operator {operator}')
