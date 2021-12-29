@@ -1,5 +1,10 @@
-2021-12-28 16:38:28,553 ERROR <module> || Invalid operator 6
-2021-12-28 16:38:31,839 INFO <module> || The user entered the numbers 3 and 2
-2021-12-28 16:38:31,840 INFO <module> || The user entered the + symbol
-2021-12-28 16:38:31,840 INFO <module> || 3 + 2 = 5
-2021-12-28 16:38:32,790 INFO <module> || Project ended
+2021-12-29 15:36:25,351 INFO <module> || The user entered the numbers 12 and 32
+2021-12-29 15:36:25,352 INFO <module> || The user entered the + symbol
+2021-12-29 15:36:25,352 INFO <module> || 12 + 32 = 44
+2021-12-29 15:36:29,139 INFO <module> || The user entered the numbers 5 and 0
+2021-12-29 15:36:29,139 ERROR <module> || Cannot be divided by zero
+2021-12-29 15:36:30,531 ERROR <module> || Invalid operator 12
+2021-12-29 15:36:35,882 INFO <module> || The user entered the numbers 6 and 2
+2021-12-29 15:36:35,883 INFO <module> || The user entered the + symbol
+2021-12-29 15:36:35,883 INFO <module> || 6 + 2 = 8
+2021-12-29 15:36:38,278 INFO <module> || Project ended
